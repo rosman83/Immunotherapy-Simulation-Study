@@ -2,6 +2,7 @@ package main
 
 import (
 	pi "./helpers"
+	"fmt"
 	"math/rand"
 	"time"
 )
@@ -23,8 +24,7 @@ func main() {
 	// assigned to one of the three medications, which gives us an end result of 500.
 	for index := range medications {
 		for i := 0; i < 16; i++ {
-			pi.GeneratePatientInfo(medications[index])
-
+			fmt.Println(pi.GeneratePatientInfo(medications[index]))
 		}
 	}
 }
