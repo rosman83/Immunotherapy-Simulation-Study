@@ -3,7 +3,7 @@ package patientinfo
 import (
 	//"encoding/json"
 	//"fmt"
-	"fmt"
+
 	"log"
 	"math/rand"
 	"os"
@@ -90,7 +90,6 @@ func OldDataCleanup(directory string) {
 func CheckFile(filename string) error {
 	_, err := os.Stat(filename)
 	if os.IsNotExist(err) {
-		fmt.Println("Created data of population patients for trial named: ", filename)
 		_, err := os.Create(filename)
 		if err != nil {
 			return err

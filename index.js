@@ -44,3 +44,18 @@ function eventSimulator(proabability) {
         }
     }
 }
+
+// First we create the probability options model for the severity of the adverse effect based on cited statistics
+// 65.82% of immunotherapy patients developed any adverse effects.
+var eventProbabilityImmuno = ["adverse", "none"];
+var eventProbabilityValuesImmuno = [66, 34];
+
+// 85.19% of chemotherapy patients developed any adverse effects.
+var eventProbabilityChemo = ["adverse", "none"];
+var eventProbabilityValuesChemo = [85, 15];
+
+// We define this to run for each of the three trial data files
+Files.forEach(function(datafile) {
+    
+});
+console.log("You get a "+ eventProbabilityImmuno[eventSimulator(eventProbabilityValuesImmuno)]);  // You get a silver coin

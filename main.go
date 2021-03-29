@@ -11,7 +11,6 @@ import (
 	"time"
 
 	pi "github.com/rashidosman/Immunotherapy-Simulation-Study/helpers"
-	sm "github.com/rashidosman/Immunotherapy-Simulation-Study/simulation"
 )
 
 // We define the structure and different traits for a patient for the study.
@@ -40,27 +39,33 @@ func main() {
 	// and analysis. We also create a container for all the single patients to become one bigger pool
 	// of trial data
 
-	var patientsCollection []*pi.Patient
-
-	trialStorage := make([]string, 3)
-
 	for index := range medications {
+		var patientsCollection []*pi.Patient
 		filename := "data/population" + fmt.Sprint(rand.Intn(99)) + ".json"
 		pi.OldDataCleanup("data")
 		pi.CheckFile(filename)
-		trialStorage = append(trialStorage, filename)
-
+		time.Sleep(1 * time.Second)
+		fmt.Println("Running this function for ", index)
 		for i := 0; i < 166; i++ {
-			unparsedPatient := pi.GeneratePatientInfo(medications[index])
+			unparsedPatient := pi.GeneratePatientInfo(medications[0])
 			patientsCollection = append(patientsCollection, unparsedPatient)
 		}
+		for i := 0; i < 166; i++ {
+			unparsedPatient := pi.GeneratePatientInfo(medications[1])
+			patientsCollection = append(patientsCollection, unparsedPatient)
+		}
+		for i := 0; i < 166; i++ {
+			unparsedPatient := pi.GeneratePatientInfo(medications[2])
+			patientsCollection = append(patientsCollection, unparsedPatient)
+		}
+
 		parsedPatient, err := json.MarshalIndent(patientsCollection, "", "  ")
 		if err != nil {
 			fmt.Println(err)
 		}
 
-		// Write data of each petient into the JSON data file for the trial
-
+		// Write data of each patient into the JSON data file for the trial
+		time.Sleep(1 * time.Second)
 		err = ioutil.WriteFile(filename, parsedPatient, 0644)
 		if err != nil {
 			fmt.Println(err)
@@ -68,9 +73,6 @@ func main() {
 
 	}
 	fmt.Println("Finished Stage 1: All data populations have been created for the three trials.")
-	time.Sleep(1 * time.Second)
-
-	sm.AdverseEventsSimulator("ipilimumab")
 	time.Sleep(1 * time.Second)
 
 	// In the next stage we begin the logic for the actual simulation.
