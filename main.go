@@ -11,6 +11,7 @@ import (
 	"time"
 
 	pi "github.com/rashidosman/Immunotherapy-Simulation-Study/helpers"
+	sm "github.com/rashidosman/Immunotherapy-Simulation-Study/simulation"
 )
 
 // We define the structure and different traits for a patient for the study.
@@ -48,7 +49,6 @@ func main() {
 		pi.OldDataCleanup("data")
 		pi.CheckFile(filename)
 		trialStorage = append(trialStorage, filename)
-		time.Sleep(1 * time.Second)
 
 		for i := 0; i < 166; i++ {
 			unparsedPatient := pi.GeneratePatientInfo(medications[index])
@@ -67,7 +67,13 @@ func main() {
 		}
 
 	}
-	fmt.Println(trialStorage)
-	fmt.Println(fmt.Println("Finished Stage 1: All data populations have been created for the three trials."))
+	fmt.Println("Finished Stage 1: All data populations have been created for the three trials.")
+	time.Sleep(1 * time.Second)
 
+	sm.AdverseEventsSimulator("ipilimumab")
+	time.Sleep(1 * time.Second)
+
+	// In the next stage we begin the logic for the actual simulation.
+	// At this point, all three populations for our trials are now complete.
+	// Later we will generate a report for each patient in document format with the results of their trial observations.
 }
