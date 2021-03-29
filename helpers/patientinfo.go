@@ -1,17 +1,22 @@
 package patientinfo
 
 import (
+	//"encoding/json"
+	//"fmt"
+	"fmt"
+	"log"
 	"math/rand"
+	"os"
 )
 
-type patient struct {
-	name       int    // Patients are assigned identifiers instead of direct names for privacy.
-	agegroup   string // The general age group of the patient. There is a specified number of patients in each age group.
-	age        int    // Patients are assigned an specific age from the above age group.
-	gender     string // Patients are assigned a gender.
-	severity   string // Patients are assigned a severity level for the Melanoma disease. Can be Mild, Moderate, Or Severe.
-	ethnicity  string // Patients are assigned a standard ethnicity.
-	medication string // Patients are assigned one of three cancer medications detailed in paper.
+type Patient struct {
+	Name       int    `json:"name"`       // Patients are assigned identifiers instead of direct names for privacy.
+	Agegroup   string `json:"agegroup"`   // The general age group of the patient. There is a specified number of patients in each age group.
+	Age        int    `json:"age"`        // Patients are assigned an specific age from the above age group.
+	Gender     string `json:"gender"`     // Patients are assigned a gender.
+	Severity   string `json:"severity"`   // Patients are assigned a severity level for the Melanoma disease. Can be Mild, Moderate, Or Severe.
+	Ethnicity  string `json:"ethnicity"`  // Patients are assigned a standard ethnicity.
+	Medication string `json:"medication"` // Patients are assigned one of three cancer medications detailed in paper.
 }
 
 // We define functions that need more logic to determine
@@ -40,7 +45,7 @@ func agegroup(age int) (calcAgeGroup string) {
 	return calcAgeGroup
 }
 
-func GeneratePatientInfo(medication string) *patient {
+func GeneratePatientInfo(medication string) *Patient {
 
 	// We define arrays of options that don't need the level of
 	// logic that require entire functions
@@ -57,14 +62,39 @@ func GeneratePatientInfo(medication string) *patient {
 
 	// We proceed with the logic for choosing traits and then
 	// sending them back to the main application file
-	var p patient
+	var p Patient
 
-	p.name = rand.Int()
-	p.age = rand.Intn(78)
-	p.agegroup = agegroup(p.age)
-	p.gender = genders[rand.Intn(len(genders))]
-	p.severity = severities[rand.Intn(len(severities))]
-	p.ethnicity = ethnicities[rand.Intn(len(ethnicities))]
-	p.medication = medication
+	p.Name = rand.Int()
+	p.Age = rand.Intn(78)
+	p.Agegroup = agegroup(p.Age)
+	p.Gender = genders[rand.Intn(len(genders))]
+	p.Severity = severities[rand.Intn(len(severities))]
+	p.Ethnicity = ethnicities[rand.Intn(len(ethnicities))]
+	p.Medication = medication
+
 	return &p
+}
+
+func OldDataCleanup(directory string) {
+	_, err := os.Stat(directory)
+
+	if os.IsNotExist(err) {
+		errDir := os.MkdirAll(directory, 0755)
+		if errDir != nil {
+			log.Fatal(err)
+		}
+
+	}
+}
+
+func CheckFile(filename string) error {
+	_, err := os.Stat(filename)
+	if os.IsNotExist(err) {
+		fmt.Println("Created data of population patients for trial named: ", filename)
+		_, err := os.Create(filename)
+		if err != nil {
+			return err
+		}
+	}
+	return nil
 }
