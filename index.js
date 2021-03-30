@@ -65,11 +65,11 @@ function eventSimulator(proabability) {
 
 // 65.82% of immunotherapy patients developed any adverse effects.
 var eventProbabilityImmuno = ["adverse", "none"];
-var eventProbabilityValuesImmuno = [66, 34];
+var eventProbabilityValuesImmuno = [66/2, 34 + 66/2];
 
 // 85.19% of chemotherapy patients developed any adverse effects.
 var eventProbabilityChemo = ["adverse", "none"];
-var eventProbabilityValuesChemo = [85, 15];
+var eventProbabilityValuesChemo = [85/2, 15 + 85/2];
 
 // Fatality probabilities for Immunotherapy and Chemotherapy 
 var fatalProbabilityChemo = ["fatality", "none"];
@@ -85,6 +85,8 @@ let patientTrialOutcome = {}
 Files.forEach(function(datafile, index) {
     console.log(`Running the analysis for trial data: ` + (index + 1))
     trialData = JSON.parse(fs.readFileSync(Files[index], "utf8"));
+    // First create the file for this trial
+
     for (item in trialData) {
        // Here we run the simulation logic for each patient of the running trial
        // We do this in the previously mentioned six stages representing each four months
@@ -116,17 +118,20 @@ Files.forEach(function(datafile, index) {
            // The rate of fatality for a patient undergoing immunotherapy is approximated 
            // to be 0.87%, as compared with that of chemotherapy, 1.28% [Source 21]
             if (trialData[item].medication == 'ipilimumab' || 'nivolumab' ) {
-                if (eventProbabilityImmuno[eventSimulator(eventProbabilityValuesImmuno)] == 'fatality') {
+                if (fatalProbabilityImmuno[eventSimulator(fataleventProbabilityValuesImmuno)] == 'fatality') {
+                    console.log("Detected fatality")
                     return true
                 } else {
                     return false
                 }
             } else if (trialData[item].medication == 'doxycycline') {
-                if (eventProbabilityChemo[eventSimulator(eventProbabilityValuesChemo)] == 'fatality') {
+                if (fatalProbabilityChemo[eventSimulator(fataleventProbabilityValuesChemo)] == 'fatality') {
                     return true
                 } else {
                     return false
                 }
+            } else {
+                let err = 'We could not detect the medication for the following patient: \n' + item
             }
        }
 
@@ -140,22 +145,30 @@ Files.forEach(function(datafile, index) {
 
        let patientinfo = {
         // First we define the previous initial data
-        "name": item.name,
-        "agegroup": item.agegroup,
-        "age": item.age,
-        "gender": item.gender,
-        "severity": item.severity,
-        "ethnicity": item.ethnicity,
-        "medication": item.medication,
+        "name": trialData[item].name,
+        "agegroup": trialData[item].agegroup,
+        "age": trialData[item].age,
+        "gender": trialData[item].gender,
+        "severity": trialData[item].severity,
+        "ethnicity": trialData[item].ethnicity,
+        "medication": trialData[item].medication,
         // Now we define the new results in additional properties
         // for later analysis
         "health": 100,
         "adverseevents": experienceAdverseEvents,
         "fatality": fatalitySimulation(),
+        // Health between stages
+        "stage1": "Healthy",
+        "stage2": "Healthy",
+        "stage3": "Healthy",
+        "stage4": "Healthy"
        }
-       let patientobjectidentifier = String(item.name)
-       patientTrialOutcome.patientobjectidentifier = patientinfo;
-       console.log(patientinfo)
+       
+       // We proceed to save all the information to a JSON data file for later analysis
+       fs.appendFile(`./data/final/results_trial${index + 1}.json`, JSON.stringify(patientinfo, null, 2), function (err) {
+            if (err) throw err;
+        });
     } 
 
+    console.log(`\nTrial ${index + 1} has completed producing the following final results file: data/final/results_${index + 1}.json`)
 });
