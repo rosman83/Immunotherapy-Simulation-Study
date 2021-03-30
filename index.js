@@ -1,3 +1,4 @@
+
 // Here we define dependencies we need for the program
 var fs = require('fs'); // fs stands for the File System of the machine 
 const Path = require("path"); // Allows natively formatting file paths
@@ -65,7 +66,7 @@ function eventSimulator(proabability) {
 
 // 65.82% of immunotherapy patients developed any adverse effects.
 var eventProbabilityImmuno = ["adverse", "none"];
-var eventProbabilityValuesImmuno = [66/2, 34 + 66/2];
+var eventProbabilityValuesImmuno = [66/3, 34 + 66/3];
 
 // 85.19% of chemotherapy patients developed any adverse effects.
 var eventProbabilityChemo = ["adverse", "none"];
@@ -85,6 +86,8 @@ let patientTrialOutcome = {}
 Files.forEach(function(datafile, index) {
     console.log(`Running the analysis for trial data: ` + (index + 1))
     trialData = JSON.parse(fs.readFileSync(Files[index], "utf8"));
+    // Create a container to store the information for the simulation
+    trialSimulationResults = []
     // First create the file for this trial
 
     for (item in trialData) {
@@ -92,7 +95,7 @@ Files.forEach(function(datafile, index) {
        // We do this in the previously mentioned six stages representing each four months
         let experienceAdverseEvents = false
 
-       function stageSimulation() {
+       function stageSimulation(number) {
            // The simulation functions with different statistical probabilities
            // depending on the medication each patient takes.
             if (trialData[item].medication == 'ipilimumab') {
@@ -136,8 +139,9 @@ Files.forEach(function(datafile, index) {
 
        // Here we store the results of any adverse events for the stages to later document.
        stageResults = []
+       healthStageResults = []
        for (i = 0; i < 4; i++) {
-        stageSimulation()
+        stageSimulation((i+1))
        }
 
        // Store this information in the final container that we prepare documentation
@@ -154,14 +158,14 @@ Files.forEach(function(datafile, index) {
         "medication": trialData[item].medication,
         // Now we define the new results in additional properties
         // for later analysis
-        "health": 100,
+        "health": 100 + healthStageResults[0] + healthStageResults[1] + healthStageResults[2] + healthStageResults[3],
         "adverseevents": experienceAdverseEvents,
         "fatality": fatalitySimulation(),
         // Health between stages
-        "stage1": "Healthy",
-        "stage2": "Healthy",
-        "stage3": "Healthy",
-        "stage4": "Healthy"
+        "stage 1 events": "Healthy",
+        "stage 2 events": "Healthy",
+        "stage 3 events": "Healthy",
+        "stage 4 events": "Healthy"
        }
        
        // We proceed to save all the information to a JSON data file for later analysis
