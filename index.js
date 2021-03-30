@@ -27,7 +27,7 @@ function ThroughDirectory(Directory) {
 
 ThroughDirectory("./data/");
 // We briefly report that we successfully disovered the population data files.
-console.log(`\nThe simulation has now been launched with the following discovered data files:\n\n- ${Files[0]}\n- ${Files[1]}\n- ${Files[2]}`)
+console.log(`\nThe simulation has now been launched with the following discovered data files:\n\n- ${Files[0]}\n- ${Files[1]}\n- ${Files[2]}\n`)
 
 // This is the base function that will choose events based on probability
 function eventSimulator(proabability) {
@@ -54,8 +54,42 @@ var eventProbabilityValuesImmuno = [66, 34];
 var eventProbabilityChemo = ["adverse", "none"];
 var eventProbabilityValuesChemo = [85, 15];
 
+// We create an array container to store the future concluding information
+let patientTrialOutcome = {}
+
 // We define this to run for each of the three trial data files
-Files.forEach(function(datafile) {
+Files.forEach(function(datafile, index) {
+    console.log(`Running the analysis for trial data: ` + (index + 1))
+    trialData = JSON.parse(fs.readFileSync(Files[index], "utf8"));
+    for (item in trialData) {
+       var patientinfo = []
+       // Here we run the simulation logic for each patient of the running trial
+       // We do this in the previously mentioned six stages representing each four months
     
+
+       function stageSimulation() {
+           // The simulation functions with different statistical probabilities
+           // depending on the medication each patient takes.
+            if (trialData[item].medication == 'ipilimumab') {
+                if (eventProbabilityImmuno[eventSimulator(eventProbabilityValuesImmuno)] == 'adverse') {
+                    console.log("There was an adverse event")
+                } else {
+                    console.log("There was no adverse event")
+                }
+            } else if (trialData[item].medication == 'nivolumab') {
+            } else if (trialData[item].medication == 'doxycycline') {
+            }
+       }
+
+
+       for (i = 0; i < 6; i++) {
+        stageSimulation()
+       }
+
+       // Store this information in the final container that we prepare documentation
+       // in charts and graphs for later.
+
+       // patientTrialOutcome.String(item.name) = patientinfo;
+
+    } 
 });
-console.log("You get a "+ eventProbabilityImmuno[eventSimulator(eventProbabilityValuesImmuno)]);  // You get a silver coin
