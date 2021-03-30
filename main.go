@@ -41,8 +41,8 @@ func main() {
 
 	for index := range medications {
 		var patientsCollection []*pi.Patient
-		filename := "data/population" + fmt.Sprint(rand.Intn(99)) + ".json"
-		pi.OldDataCleanup("data")
+		filename := "data/initial/population" + fmt.Sprint(rand.Intn(99)) + ".json"
+		pi.OldDataCleanup("data/initial")
 		pi.CheckFile(filename)
 		time.Sleep(1 * time.Second)
 		fmt.Println("Running this function for ", index)

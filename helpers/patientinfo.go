@@ -4,6 +4,7 @@ import (
 	//"encoding/json"
 	//"fmt"
 
+	"fmt"
 	"log"
 	"math/rand"
 	"os"
@@ -81,6 +82,7 @@ func OldDataCleanup(directory string) {
 	if os.IsNotExist(err) {
 		errDir := os.MkdirAll(directory, 0755)
 		if errDir != nil {
+			fmt.Println("There was an error cleaning up old data.")
 			log.Fatal(err)
 		}
 
@@ -92,6 +94,7 @@ func CheckFile(filename string) error {
 	if os.IsNotExist(err) {
 		_, err := os.Create(filename)
 		if err != nil {
+			fmt.Println("There was an error creating JSON data.")
 			return err
 		}
 	}
