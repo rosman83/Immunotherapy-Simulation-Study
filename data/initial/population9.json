@@ -1,0 +1,4484 @@
+[
+  {
+    "name": 2883189726148312930,
+    "agegroup": "pediatric",
+    "age": 1,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8122342393470924865,
+    "agegroup": "pediatric",
+    "age": 14,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1090653649469277129,
+    "agegroup": "pediatric",
+    "age": 13,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 4218617017736203574,
+    "agegroup": "middle age",
+    "age": 56,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6671291295348591580,
+    "agegroup": "young",
+    "age": 45,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 882147612065129034,
+    "agegroup": "young",
+    "age": 43,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 879145795547647499,
+    "agegroup": "young",
+    "age": 41,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8187265170035650141,
+    "agegroup": "pediatric",
+    "age": 6,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 826698934501572919,
+    "agegroup": "middle age",
+    "age": 62,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8123790683398288514,
+    "agegroup": "middle age",
+    "age": 51,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 532987016830363538,
+    "agegroup": "young",
+    "age": 32,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1337352319977770792,
+    "agegroup": "pediatric",
+    "age": 5,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 9016082953518562903,
+    "agegroup": "young",
+    "age": 29,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7452704068165739540,
+    "agegroup": "elderly",
+    "age": 66,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1694433414835353894,
+    "agegroup": "young",
+    "age": 37,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7841444153364676724,
+    "agegroup": "young",
+    "age": 33,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 4108674406320748912,
+    "agegroup": "young",
+    "age": 15,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6930926209301181866,
+    "agegroup": "young",
+    "age": 15,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 214233080281641288,
+    "agegroup": "young",
+    "age": 28,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 344305600120190085,
+    "agegroup": "young",
+    "age": 34,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2260549799214391657,
+    "agegroup": "pediatric",
+    "age": 1,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3558886151729194093,
+    "agegroup": "elderly",
+    "age": 69,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 4228500085138904858,
+    "agegroup": "young",
+    "age": 17,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2774572233275954966,
+    "agegroup": "pediatric",
+    "age": 11,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6237073182909003936,
+    "agegroup": "elderly",
+    "age": 69,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2206614026414491166,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 5046830381740833415,
+    "agegroup": "middle age",
+    "age": 55,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1356611105308800698,
+    "agegroup": "pediatric",
+    "age": 3,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 334091564150196924,
+    "agegroup": "young",
+    "age": 15,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 4520392446639282695,
+    "agegroup": "young",
+    "age": 34,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8778698532464314717,
+    "agegroup": "middle age",
+    "age": 62,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8638322845025992030,
+    "agegroup": "pediatric",
+    "age": 5,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 234046056392779498,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3719336133371994079,
+    "agegroup": "elderly",
+    "age": 75,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1136758294486062137,
+    "agegroup": "middle age",
+    "age": 51,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 522727221729442789,
+    "agegroup": "middle age",
+    "age": 57,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3501771474665379158,
+    "agegroup": "middle age",
+    "age": 52,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7669457544884716190,
+    "agegroup": "middle age",
+    "age": 61,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2066896421606306247,
+    "agegroup": "young",
+    "age": 25,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1764303127061023073,
+    "agegroup": "young",
+    "age": 19,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1876453219060611052,
+    "agegroup": "young",
+    "age": 42,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6046098547524132817,
+    "agegroup": "pediatric",
+    "age": 13,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 5037127252886863697,
+    "agegroup": "young",
+    "age": 39,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3149469834692767282,
+    "agegroup": "pediatric",
+    "age": 4,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6931181608917423067,
+    "agegroup": "pediatric",
+    "age": 13,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3126655699463606094,
+    "agegroup": "young",
+    "age": 36,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 5179771496343708743,
+    "agegroup": "elderly",
+    "age": 68,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 4486636500685325026,
+    "agegroup": "elderly",
+    "age": 75,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 833939813413243409,
+    "agegroup": "pediatric",
+    "age": 14,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 4146358395744505614,
+    "agegroup": "middle age",
+    "age": 62,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 639563841641834638,
+    "agegroup": "middle age",
+    "age": 61,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8951320858580123327,
+    "agegroup": "pediatric",
+    "age": 2,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8256494943832635967,
+    "agegroup": "pediatric",
+    "age": 0,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1267371960080751179,
+    "agegroup": "middle age",
+    "age": 58,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6529950581696123081,
+    "agegroup": "elderly",
+    "age": 71,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6595914604186916168,
+    "agegroup": "pediatric",
+    "age": 2,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 676072984839235313,
+    "agegroup": "young",
+    "age": 16,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2245508729135232723,
+    "agegroup": "middle age",
+    "age": 49,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 472752150661175726,
+    "agegroup": "elderly",
+    "age": 72,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 831562266372807761,
+    "agegroup": "young",
+    "age": 29,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1071636640023767538,
+    "agegroup": "young",
+    "age": 18,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7855949463377109103,
+    "agegroup": "young",
+    "age": 31,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1878531571292083524,
+    "agegroup": "young",
+    "age": 31,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 5180961531657201098,
+    "agegroup": "young",
+    "age": 46,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1881655879771623586,
+    "agegroup": "young",
+    "age": 30,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 4359213232260828521,
+    "agegroup": "young",
+    "age": 19,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 771015902257710738,
+    "agegroup": "pediatric",
+    "age": 9,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 4069196939693160943,
+    "agegroup": "young",
+    "age": 26,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 5497403199805140601,
+    "agegroup": "young",
+    "age": 43,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3956872289571930894,
+    "agegroup": "young",
+    "age": 29,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3507113470594513377,
+    "agegroup": "elderly",
+    "age": 68,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1159096254151442470,
+    "agegroup": "young",
+    "age": 26,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 5296463435540999028,
+    "agegroup": "elderly",
+    "age": 72,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3033511702741517490,
+    "agegroup": "middle age",
+    "age": 55,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1128442253596746264,
+    "agegroup": "young",
+    "age": 20,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2153337549349922064,
+    "agegroup": "elderly",
+    "age": 77,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 83624648227145365,
+    "agegroup": "pediatric",
+    "age": 11,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7587465560932029685,
+    "agegroup": "elderly",
+    "age": 67,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1916454027532602160,
+    "agegroup": "young",
+    "age": 43,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 5375236059503185721,
+    "agegroup": "elderly",
+    "age": 70,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 5207704757312552317,
+    "agegroup": "young",
+    "age": 32,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7638144977630552911,
+    "agegroup": "elderly",
+    "age": 66,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6444977317551986291,
+    "agegroup": "young",
+    "age": 27,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 655909737407091890,
+    "agegroup": "young",
+    "age": 27,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 5291621695352222182,
+    "agegroup": "middle age",
+    "age": 55,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2976280862795878110,
+    "agegroup": "middle age",
+    "age": 58,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2292282082907766180,
+    "agegroup": "young",
+    "age": 45,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1125704664513387805,
+    "agegroup": "young",
+    "age": 21,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6406934844461378400,
+    "agegroup": "young",
+    "age": 40,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1676186348359639919,
+    "agegroup": "middle age",
+    "age": 53,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2740712560526968096,
+    "agegroup": "young",
+    "age": 19,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 861621859313597023,
+    "agegroup": "middle age",
+    "age": 57,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 662096760605099792,
+    "agegroup": "young",
+    "age": 27,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 433945638805166366,
+    "agegroup": "middle age",
+    "age": 57,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 4903753468260950922,
+    "agegroup": "middle age",
+    "age": 48,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 212379432193623269,
+    "agegroup": "young",
+    "age": 42,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1876431579820499515,
+    "agegroup": "elderly",
+    "age": 75,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3742398204837513905,
+    "agegroup": "young",
+    "age": 33,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7060992295772902098,
+    "agegroup": "young",
+    "age": 18,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2661490509619604362,
+    "agegroup": "young",
+    "age": 44,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7127551937683713359,
+    "agegroup": "young",
+    "age": 46,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3003666309412217751,
+    "agegroup": "young",
+    "age": 33,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6175164827822094799,
+    "agegroup": "young",
+    "age": 40,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8951331789193480783,
+    "agegroup": "young",
+    "age": 25,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3073744871881212203,
+    "agegroup": "middle age",
+    "age": 53,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6549020750540168760,
+    "agegroup": "elderly",
+    "age": 73,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1456179613416214569,
+    "agegroup": "young",
+    "age": 47,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1108630311216781282,
+    "agegroup": "middle age",
+    "age": 48,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3077666542050881533,
+    "agegroup": "elderly",
+    "age": 68,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2211168211356509391,
+    "agegroup": "pediatric",
+    "age": 8,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 4529762183521432350,
+    "agegroup": "young",
+    "age": 26,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 760867276736617213,
+    "agegroup": "young",
+    "age": 22,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 5137653790163755139,
+    "agegroup": "pediatric",
+    "age": 5,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3127491431797044563,
+    "agegroup": "young",
+    "age": 15,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7844885656823662720,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6899011706568765305,
+    "agegroup": "young",
+    "age": 25,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2248662087318576573,
+    "agegroup": "pediatric",
+    "age": 10,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2246356621302297839,
+    "agegroup": "elderly",
+    "age": 72,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7076646003860362382,
+    "agegroup": "young",
+    "age": 46,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1978009823410357462,
+    "agegroup": "young",
+    "age": 32,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7652509210298992214,
+    "agegroup": "elderly",
+    "age": 77,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8003862515206327249,
+    "agegroup": "young",
+    "age": 27,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6582703300556703996,
+    "agegroup": "pediatric",
+    "age": 12,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1782466413036617002,
+    "agegroup": "young",
+    "age": 24,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 961622899702879720,
+    "agegroup": "young",
+    "age": 42,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 304999494277917854,
+    "agegroup": "elderly",
+    "age": 67,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6372001590869828142,
+    "agegroup": "young",
+    "age": 16,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3583635757493374043,
+    "agegroup": "young",
+    "age": 19,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8025506387302263070,
+    "agegroup": "young",
+    "age": 16,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3599997019055597029,
+    "agegroup": "pediatric",
+    "age": 10,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 4191495991948828521,
+    "agegroup": "pediatric",
+    "age": 6,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3991061625892233342,
+    "agegroup": "middle age",
+    "age": 62,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1328699851890593084,
+    "agegroup": "young",
+    "age": 28,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2469281875374472334,
+    "agegroup": "pediatric",
+    "age": 9,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8706063650007729292,
+    "agegroup": "young",
+    "age": 17,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1521774309543917182,
+    "agegroup": "elderly",
+    "age": 66,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 595687521421516579,
+    "agegroup": "pediatric",
+    "age": 3,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7532431284111259017,
+    "agegroup": "young",
+    "age": 37,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 4883703748429260859,
+    "agegroup": "young",
+    "age": 45,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 9133148301513357084,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7935744158939170105,
+    "agegroup": "young",
+    "age": 25,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 827083349399086367,
+    "agegroup": "young",
+    "age": 25,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3599780523857620805,
+    "agegroup": "young",
+    "age": 42,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2592894500793289150,
+    "agegroup": "middle age",
+    "age": 56,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 4930824284837081454,
+    "agegroup": "young",
+    "age": 26,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 9208715022982458673,
+    "agegroup": "young",
+    "age": 34,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 5825631975572652375,
+    "agegroup": "middle age",
+    "age": 57,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7583078466049016242,
+    "agegroup": "middle age",
+    "age": 61,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 5373590995760526729,
+    "agegroup": "elderly",
+    "age": 66,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8025169738982012497,
+    "agegroup": "pediatric",
+    "age": 9,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 712097037114325395,
+    "agegroup": "elderly",
+    "age": 64,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3448640362436803601,
+    "agegroup": "middle age",
+    "age": 60,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6933532705942599027,
+    "agegroup": "middle age",
+    "age": 55,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8589749188778047928,
+    "agegroup": "pediatric",
+    "age": 6,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2535228748217933186,
+    "agegroup": "young",
+    "age": 35,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 2465545754137143945,
+    "agegroup": "pediatric",
+    "age": 9,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1749999141334820636,
+    "agegroup": "middle age",
+    "age": 54,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 8439484740314170685,
+    "agegroup": "pediatric",
+    "age": 1,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 443656543116709676,
+    "agegroup": "middle age",
+    "age": 50,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1052335068721921186,
+    "agegroup": "young",
+    "age": 46,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 5087565379711405658,
+    "agegroup": "pediatric",
+    "age": 13,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3132626266850544129,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 7121534957654385822,
+    "agegroup": "young",
+    "age": 46,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 3601255492149390901,
+    "agegroup": "elderly",
+    "age": 75,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 9024090962607834323,
+    "agegroup": "young",
+    "age": 23,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 6217880079451654823,
+    "agegroup": "young",
+    "age": 15,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "ipilimumab"
+  },
+  {
+    "name": 1777449905367451460,
+    "agegroup": "young",
+    "age": 47,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4396177010181709174,
+    "agegroup": "middle age",
+    "age": 55,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4938767778848411379,
+    "agegroup": "young",
+    "age": 19,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4266189598125842272,
+    "agegroup": "young",
+    "age": 23,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5547237751964251314,
+    "agegroup": "young",
+    "age": 41,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5283296092879058652,
+    "agegroup": "young",
+    "age": 18,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3549207828981198640,
+    "agegroup": "young",
+    "age": 29,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4967695712411028041,
+    "agegroup": "elderly",
+    "age": 76,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 364440868334716754,
+    "agegroup": "pediatric",
+    "age": 2,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 8124884492036767853,
+    "agegroup": "young",
+    "age": 38,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1315237718499966558,
+    "agegroup": "pediatric",
+    "age": 14,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5700285948542547970,
+    "agegroup": "young",
+    "age": 35,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3135468695786531429,
+    "agegroup": "young",
+    "age": 44,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 512153747935463834,
+    "agegroup": "young",
+    "age": 41,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7657370480645285395,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6655403722846591539,
+    "agegroup": "middle age",
+    "age": 57,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5518476906373210583,
+    "agegroup": "pediatric",
+    "age": 6,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5766456906275268495,
+    "agegroup": "pediatric",
+    "age": 9,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6956328680606093899,
+    "agegroup": "young",
+    "age": 26,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7983803781354758385,
+    "agegroup": "young",
+    "age": 30,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 8383081735389281948,
+    "agegroup": "middle age",
+    "age": 55,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2972601354146653849,
+    "agegroup": "pediatric",
+    "age": 3,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 9219406978657261279,
+    "agegroup": "elderly",
+    "age": 67,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1165479913729950586,
+    "agegroup": "pediatric",
+    "age": 1,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4559170621662508171,
+    "agegroup": "pediatric",
+    "age": 0,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5096055053106270908,
+    "agegroup": "elderly",
+    "age": 67,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 442139029810579727,
+    "agegroup": "elderly",
+    "age": 67,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5584894433218177673,
+    "agegroup": "elderly",
+    "age": 68,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2875647538733247965,
+    "agegroup": "pediatric",
+    "age": 3,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1064612896729703739,
+    "agegroup": "young",
+    "age": 46,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4835499936943001560,
+    "agegroup": "pediatric",
+    "age": 0,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 8347578582631934301,
+    "agegroup": "pediatric",
+    "age": 14,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1736295390206957921,
+    "agegroup": "middle age",
+    "age": 53,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4993669234889793136,
+    "agegroup": "pediatric",
+    "age": 9,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 305402682220816697,
+    "agegroup": "young",
+    "age": 26,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4859121525429878497,
+    "agegroup": "young",
+    "age": 47,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4441913616476059382,
+    "agegroup": "elderly",
+    "age": 67,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4469789863702599661,
+    "agegroup": "pediatric",
+    "age": 8,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6468702061244129254,
+    "agegroup": "pediatric",
+    "age": 9,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7198428382366014427,
+    "agegroup": "pediatric",
+    "age": 1,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7848818305382679805,
+    "agegroup": "middle age",
+    "age": 57,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4851688904800397732,
+    "agegroup": "elderly",
+    "age": 72,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4035171139069174734,
+    "agegroup": "pediatric",
+    "age": 5,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3918521209634532157,
+    "agegroup": "young",
+    "age": 28,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1956654052082076462,
+    "agegroup": "young",
+    "age": 17,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5654487819611539229,
+    "agegroup": "middle age",
+    "age": 57,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3928790255774741921,
+    "agegroup": "pediatric",
+    "age": 5,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7787749125579400092,
+    "agegroup": "young",
+    "age": 21,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3436546014626399611,
+    "agegroup": "young",
+    "age": 21,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 66943812160086901,
+    "agegroup": "elderly",
+    "age": 76,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7353213518038620421,
+    "agegroup": "pediatric",
+    "age": 6,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 250559868368298444,
+    "agegroup": "pediatric",
+    "age": 3,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2108116591279085315,
+    "agegroup": "elderly",
+    "age": 71,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 8547218713226647510,
+    "agegroup": "young",
+    "age": 46,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6310073583652527315,
+    "agegroup": "young",
+    "age": 47,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 9117602465856033858,
+    "agegroup": "elderly",
+    "age": 68,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5328235481108052404,
+    "agegroup": "middle age",
+    "age": 61,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1278118570826193252,
+    "agegroup": "young",
+    "age": 16,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7283212116080828801,
+    "agegroup": "middle age",
+    "age": 56,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6620720375247013978,
+    "agegroup": "elderly",
+    "age": 65,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2635145831661283927,
+    "agegroup": "young",
+    "age": 34,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5285717700659421273,
+    "agegroup": "pediatric",
+    "age": 11,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5967749847756112336,
+    "agegroup": "young",
+    "age": 32,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3672255847075417647,
+    "agegroup": "young",
+    "age": 25,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6693372258763647487,
+    "agegroup": "pediatric",
+    "age": 3,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 877375401355090893,
+    "agegroup": "young",
+    "age": 47,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4881197645404420658,
+    "agegroup": "middle age",
+    "age": 53,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1962891652239250309,
+    "agegroup": "pediatric",
+    "age": 11,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4336681257358176811,
+    "agegroup": "pediatric",
+    "age": 5,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7138044204562449117,
+    "agegroup": "pediatric",
+    "age": 12,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2177078761183101618,
+    "agegroup": "middle age",
+    "age": 52,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 8044144612184092432,
+    "agegroup": "middle age",
+    "age": 50,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2062782950370700513,
+    "agegroup": "young",
+    "age": 43,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4104978201414949338,
+    "agegroup": "young",
+    "age": 21,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 408664036889162911,
+    "agegroup": "middle age",
+    "age": 52,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2512770187670401614,
+    "agegroup": "middle age",
+    "age": 59,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 8858547048844841336,
+    "agegroup": "pediatric",
+    "age": 10,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3266365931302240066,
+    "agegroup": "young",
+    "age": 17,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2023794021212881981,
+    "agegroup": "elderly",
+    "age": 75,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7793278179949692904,
+    "agegroup": "young",
+    "age": 34,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1720933823210189487,
+    "agegroup": "young",
+    "age": 34,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4508301866578328631,
+    "agegroup": "middle age",
+    "age": 61,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2572812223396797225,
+    "agegroup": "middle age",
+    "age": 56,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 285199385958940177,
+    "agegroup": "pediatric",
+    "age": 1,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6236948331616090193,
+    "agegroup": "young",
+    "age": 35,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 893688668363909763,
+    "agegroup": "young",
+    "age": 16,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3351190652858184087,
+    "agegroup": "young",
+    "age": 16,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5030036004524348196,
+    "agegroup": "young",
+    "age": 43,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 374425887937456109,
+    "agegroup": "pediatric",
+    "age": 4,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1802226084154870228,
+    "agegroup": "middle age",
+    "age": 59,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4149595124806334458,
+    "agegroup": "middle age",
+    "age": 54,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 707596852025300488,
+    "agegroup": "young",
+    "age": 45,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 8053586899033491663,
+    "agegroup": "elderly",
+    "age": 69,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3353936585586162339,
+    "agegroup": "middle age",
+    "age": 62,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7579000913308983803,
+    "agegroup": "young",
+    "age": 25,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5291015901573475923,
+    "agegroup": "pediatric",
+    "age": 11,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2833945626042669383,
+    "agegroup": "young",
+    "age": 34,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6073405426561882146,
+    "agegroup": "young",
+    "age": 42,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6302865605603759947,
+    "agegroup": "young",
+    "age": 38,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 832375838638170544,
+    "agegroup": "pediatric",
+    "age": 12,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6750351818614599349,
+    "agegroup": "elderly",
+    "age": 74,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6052960304591420773,
+    "agegroup": "pediatric",
+    "age": 14,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6726997010017667333,
+    "agegroup": "young",
+    "age": 26,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2711114541282368108,
+    "agegroup": "young",
+    "age": 31,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6973132667760500543,
+    "agegroup": "elderly",
+    "age": 65,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1593521268083927607,
+    "agegroup": "young",
+    "age": 30,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1293784370001267808,
+    "agegroup": "pediatric",
+    "age": 13,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5367677351307027088,
+    "agegroup": "middle age",
+    "age": 52,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2161150301903526542,
+    "agegroup": "middle age",
+    "age": 55,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7942414007699491191,
+    "agegroup": "pediatric",
+    "age": 5,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3794897141901209011,
+    "agegroup": "pediatric",
+    "age": 6,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6165583902356485183,
+    "agegroup": "elderly",
+    "age": 77,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 8751729299790028001,
+    "agegroup": "pediatric",
+    "age": 14,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5828701253531739373,
+    "agegroup": "middle age",
+    "age": 49,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1726156406672661419,
+    "agegroup": "young",
+    "age": 29,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4348437357382891517,
+    "agegroup": "elderly",
+    "age": 70,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7071628545424790123,
+    "agegroup": "young",
+    "age": 24,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 9099394400883410094,
+    "agegroup": "elderly",
+    "age": 65,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1288608417455041757,
+    "agegroup": "young",
+    "age": 16,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3999944187186222318,
+    "agegroup": "young",
+    "age": 41,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3846474163487881034,
+    "agegroup": "young",
+    "age": 35,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4251726981490028798,
+    "agegroup": "young",
+    "age": 44,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6786021147378454616,
+    "agegroup": "young",
+    "age": 38,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4540730222202458232,
+    "agegroup": "young",
+    "age": 27,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 418809973073665338,
+    "agegroup": "young",
+    "age": 21,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4220085589072667394,
+    "agegroup": "young",
+    "age": 17,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 8850625169943638590,
+    "agegroup": "young",
+    "age": 22,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4341706739317464636,
+    "agegroup": "elderly",
+    "age": 64,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5851415245429383494,
+    "agegroup": "pediatric",
+    "age": 9,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7921801574616012551,
+    "agegroup": "young",
+    "age": 40,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3470805695042227834,
+    "agegroup": "middle age",
+    "age": 58,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3915866064860294288,
+    "agegroup": "middle age",
+    "age": 63,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7797488292128794353,
+    "agegroup": "pediatric",
+    "age": 1,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 9141800591334072911,
+    "agegroup": "elderly",
+    "age": 77,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 8006177424384214510,
+    "agegroup": "middle age",
+    "age": 52,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 863269551263329513,
+    "agegroup": "young",
+    "age": 28,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 584165467727939592,
+    "agegroup": "elderly",
+    "age": 68,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 8861428338954270283,
+    "agegroup": "elderly",
+    "age": 69,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3316600403253037278,
+    "agegroup": "pediatric",
+    "age": 6,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2850091104404375679,
+    "agegroup": "elderly",
+    "age": 70,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2914914218026735070,
+    "agegroup": "young",
+    "age": 28,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6955710639979218105,
+    "agegroup": "middle age",
+    "age": 50,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1970528226442312082,
+    "agegroup": "young",
+    "age": 38,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5881704500033222999,
+    "agegroup": "young",
+    "age": 16,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3692019173111176252,
+    "agegroup": "young",
+    "age": 18,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3874161734156272865,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7276950709015384392,
+    "agegroup": "pediatric",
+    "age": 10,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1388534849262533251,
+    "agegroup": "middle age",
+    "age": 51,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1181474214762926695,
+    "agegroup": "middle age",
+    "age": 54,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6744942032457447585,
+    "agegroup": "young",
+    "age": 28,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3428483194716742554,
+    "agegroup": "elderly",
+    "age": 74,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 4317605129442544976,
+    "agegroup": "young",
+    "age": 44,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1894580484331072199,
+    "agegroup": "young",
+    "age": 37,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1312002482526870680,
+    "agegroup": "young",
+    "age": 27,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 2202405348425407910,
+    "agegroup": "young",
+    "age": 39,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 8690198357677770378,
+    "agegroup": "young",
+    "age": 16,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 5285277245201883556,
+    "agegroup": "young",
+    "age": 36,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6204497330076018171,
+    "agegroup": "young",
+    "age": 34,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3043310680495732579,
+    "agegroup": "elderly",
+    "age": 68,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 3290581657934295445,
+    "agegroup": "middle age",
+    "age": 63,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1112465716697367186,
+    "agegroup": "middle age",
+    "age": 54,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 7598133702554213323,
+    "agegroup": "young",
+    "age": 33,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 1790703055339209089,
+    "agegroup": "young",
+    "age": 33,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 672446177571414942,
+    "agegroup": "young",
+    "age": 18,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 9026533331335382392,
+    "agegroup": "middle age",
+    "age": 51,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 8901225972937113666,
+    "agegroup": "pediatric",
+    "age": 9,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "nivolumab"
+  },
+  {
+    "name": 6557444116764045649,
+    "agegroup": "young",
+    "age": 29,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4238563222434329249,
+    "agegroup": "elderly",
+    "age": 68,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6724430826432086229,
+    "agegroup": "elderly",
+    "age": 66,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 2761596087918511369,
+    "agegroup": "young",
+    "age": 28,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 2657855980596336180,
+    "agegroup": "elderly",
+    "age": 66,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6844538785481562974,
+    "agegroup": "young",
+    "age": 41,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5253416990259057747,
+    "agegroup": "young",
+    "age": 41,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3114883618295918647,
+    "agegroup": "young",
+    "age": 46,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8979386598078434070,
+    "agegroup": "young",
+    "age": 27,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6471000283153010725,
+    "agegroup": "pediatric",
+    "age": 8,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7547503457020217957,
+    "agegroup": "pediatric",
+    "age": 10,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 969949029576097856,
+    "agegroup": "pediatric",
+    "age": 2,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5222655348110562682,
+    "agegroup": "young",
+    "age": 35,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6746774196037882191,
+    "agegroup": "young",
+    "age": 31,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 1062081432791311662,
+    "agegroup": "elderly",
+    "age": 64,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 321226005373887888,
+    "agegroup": "young",
+    "age": 30,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 1619989930771329088,
+    "agegroup": "elderly",
+    "age": 65,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3372056360682571092,
+    "agegroup": "middle age",
+    "age": 59,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5371022356859584929,
+    "agegroup": "young",
+    "age": 27,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7483434165207790030,
+    "agegroup": "middle age",
+    "age": 62,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7847907316970848997,
+    "agegroup": "middle age",
+    "age": 59,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8222182026166205573,
+    "agegroup": "young",
+    "age": 20,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 2829556132763479828,
+    "agegroup": "young",
+    "age": 39,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 80369236156059625,
+    "agegroup": "middle age",
+    "age": 61,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4454325223974624721,
+    "agegroup": "pediatric",
+    "age": 8,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6290267763653996712,
+    "agegroup": "young",
+    "age": 21,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8433257467670872951,
+    "agegroup": "elderly",
+    "age": 64,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4790707247346666898,
+    "agegroup": "middle age",
+    "age": 56,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4862262177333391651,
+    "agegroup": "pediatric",
+    "age": 6,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 683940266955703194,
+    "agegroup": "elderly",
+    "age": 66,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8165043020292167204,
+    "agegroup": "young",
+    "age": 38,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 744787577139317881,
+    "agegroup": "pediatric",
+    "age": 3,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7281775409746274494,
+    "agegroup": "middle age",
+    "age": 54,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3284203160567856195,
+    "agegroup": "young",
+    "age": 29,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6489305666689817837,
+    "agegroup": "young",
+    "age": 27,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 2309302761691392676,
+    "agegroup": "middle age",
+    "age": 50,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6618453135324497817,
+    "agegroup": "middle age",
+    "age": 57,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 32976249509494398,
+    "agegroup": "pediatric",
+    "age": 12,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5545335480354085492,
+    "agegroup": "young",
+    "age": 31,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3145384386421697254,
+    "agegroup": "elderly",
+    "age": 74,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4866705353247324416,
+    "agegroup": "middle age",
+    "age": 56,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 9052673014849008766,
+    "agegroup": "pediatric",
+    "age": 5,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5230842162469528353,
+    "agegroup": "pediatric",
+    "age": 9,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3462006259245316836,
+    "agegroup": "elderly",
+    "age": 72,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 2185774409820360049,
+    "agegroup": "elderly",
+    "age": 73,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5554078342730582451,
+    "agegroup": "young",
+    "age": 47,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5534777670228722714,
+    "agegroup": "elderly",
+    "age": 73,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3671395848930633387,
+    "agegroup": "middle age",
+    "age": 61,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6542476955889743827,
+    "agegroup": "young",
+    "age": 23,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 2659977973270545508,
+    "agegroup": "elderly",
+    "age": 70,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4991114682049009684,
+    "agegroup": "young",
+    "age": 44,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4571790534617585571,
+    "agegroup": "middle age",
+    "age": 49,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 234919399485684303,
+    "agegroup": "young",
+    "age": 38,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5885708665774391035,
+    "agegroup": "young",
+    "age": 45,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 672496606040488068,
+    "agegroup": "young",
+    "age": 38,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6478948391626374652,
+    "agegroup": "pediatric",
+    "age": 3,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 933959431674678115,
+    "agegroup": "young",
+    "age": 19,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 1776159141279114251,
+    "agegroup": "middle age",
+    "age": 62,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 637870089298156781,
+    "agegroup": "elderly",
+    "age": 68,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 9051105446551648847,
+    "agegroup": "pediatric",
+    "age": 11,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4448315600970849209,
+    "agegroup": "young",
+    "age": 47,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8064429368375083763,
+    "agegroup": "middle age",
+    "age": 63,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 1430193453219399650,
+    "agegroup": "young",
+    "age": 43,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4015423917597376134,
+    "agegroup": "pediatric",
+    "age": 1,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5065089764287621903,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4924931381665586345,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8931618009568324327,
+    "agegroup": "middle age",
+    "age": 63,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4410361756251145595,
+    "agegroup": "elderly",
+    "age": 70,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 1863251107130784261,
+    "agegroup": "young",
+    "age": 41,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6662432972342749458,
+    "agegroup": "middle age",
+    "age": 62,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6452181260875010650,
+    "agegroup": "middle age",
+    "age": 61,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5732579215469383891,
+    "agegroup": "young",
+    "age": 18,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6665903010804904548,
+    "agegroup": "pediatric",
+    "age": 6,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4084269104161990110,
+    "agegroup": "middle age",
+    "age": 62,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4022127876350328087,
+    "agegroup": "elderly",
+    "age": 66,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 1859358030080754691,
+    "agegroup": "pediatric",
+    "age": 14,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4415171715700014522,
+    "agegroup": "pediatric",
+    "age": 8,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7514950735385211310,
+    "agegroup": "young",
+    "age": 21,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3574226611342467911,
+    "agegroup": "pediatric",
+    "age": 2,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5928372151680682716,
+    "agegroup": "young",
+    "age": 37,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 53217311347461783,
+    "agegroup": "pediatric",
+    "age": 3,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7571296731196238671,
+    "agegroup": "middle age",
+    "age": 54,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8130627812443583570,
+    "agegroup": "middle age",
+    "age": 49,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 283031539177288902,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3508236368637513985,
+    "agegroup": "middle age",
+    "age": 50,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8211312666348623403,
+    "agegroup": "middle age",
+    "age": 61,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4121861636188935176,
+    "agegroup": "young",
+    "age": 25,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8892809673746673625,
+    "agegroup": "pediatric",
+    "age": 4,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8197282400944484844,
+    "agegroup": "middle age",
+    "age": 51,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 1240234190664047531,
+    "agegroup": "young",
+    "age": 40,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3755873384098956029,
+    "agegroup": "young",
+    "age": 47,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6519044162428553395,
+    "agegroup": "young",
+    "age": 43,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 722483752210586898,
+    "agegroup": "middle age",
+    "age": 52,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3692512788545436182,
+    "agegroup": "elderly",
+    "age": 68,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5034460061062865191,
+    "agegroup": "pediatric",
+    "age": 1,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7392084716855055240,
+    "agegroup": "middle age",
+    "age": 56,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5319223341027261337,
+    "agegroup": "elderly",
+    "age": 73,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3844308449779005234,
+    "agegroup": "young",
+    "age": 46,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4237059166705760192,
+    "agegroup": "elderly",
+    "age": 72,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7504011586108463687,
+    "agegroup": "pediatric",
+    "age": 12,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6049423013993183225,
+    "agegroup": "elderly",
+    "age": 68,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3660613037104629827,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 2441025818737765290,
+    "agegroup": "pediatric",
+    "age": 9,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 2984859953089158195,
+    "agegroup": "middle age",
+    "age": 59,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 2524568880248054262,
+    "agegroup": "elderly",
+    "age": 72,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8022822427583054145,
+    "agegroup": "young",
+    "age": 43,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 607776722863806877,
+    "agegroup": "middle age",
+    "age": 54,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3993864334561183049,
+    "agegroup": "young",
+    "age": 36,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 1265266266624658463,
+    "agegroup": "young",
+    "age": 39,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5374544475305285692,
+    "agegroup": "middle age",
+    "age": 56,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6881356160012694633,
+    "agegroup": "elderly",
+    "age": 74,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8995835248681520083,
+    "agegroup": "young",
+    "age": 17,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6655401177791211569,
+    "agegroup": "middle age",
+    "age": 51,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 480702837742225359,
+    "agegroup": "middle age",
+    "age": 52,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8881120789791315034,
+    "agegroup": "elderly",
+    "age": 68,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7010008027664332676,
+    "agegroup": "young",
+    "age": 31,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7536837947440630065,
+    "agegroup": "middle age",
+    "age": 50,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7791332730762494943,
+    "agegroup": "elderly",
+    "age": 76,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5938048405614321069,
+    "agegroup": "middle age",
+    "age": 56,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3818356677672670708,
+    "agegroup": "young",
+    "age": 41,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 2597099936692156607,
+    "agegroup": "elderly",
+    "age": 74,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 1031192590989646566,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5266232863136779255,
+    "agegroup": "young",
+    "age": 40,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3242177334684596574,
+    "agegroup": "young",
+    "age": 24,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5518290717579684571,
+    "agegroup": "elderly",
+    "age": 73,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6552814038236534871,
+    "agegroup": "young",
+    "age": 28,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8485701866987944057,
+    "agegroup": "pediatric",
+    "age": 0,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 767355329313437949,
+    "agegroup": "young",
+    "age": 24,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8883521799679712233,
+    "agegroup": "middle age",
+    "age": 55,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8651346081563275571,
+    "agegroup": "pediatric",
+    "age": 1,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 1698295396073747217,
+    "agegroup": "young",
+    "age": 46,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 1033740215025621721,
+    "agegroup": "middle age",
+    "age": 52,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5598862646915748285,
+    "agegroup": "middle age",
+    "age": 60,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 832324935545412780,
+    "agegroup": "middle age",
+    "age": 54,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4520662673220023267,
+    "agegroup": "young",
+    "age": 43,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3198634319641395243,
+    "agegroup": "middle age",
+    "age": 55,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7594550016342991494,
+    "agegroup": "middle age",
+    "age": 60,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8746875597150779920,
+    "agegroup": "elderly",
+    "age": 64,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 991939253219726885,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8785390903583443919,
+    "agegroup": "middle age",
+    "age": 58,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4802702925439873084,
+    "agegroup": "young",
+    "age": 38,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5136359196942868036,
+    "agegroup": "young",
+    "age": 17,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8698963068702640964,
+    "agegroup": "pediatric",
+    "age": 11,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3645750492402071669,
+    "agegroup": "middle age",
+    "age": 63,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5942135704108116797,
+    "agegroup": "pediatric",
+    "age": 14,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 972447225591440426,
+    "agegroup": "young",
+    "age": 18,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7248840267438113133,
+    "agegroup": "elderly",
+    "age": 76,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7826914708464639772,
+    "agegroup": "young",
+    "age": 43,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5644790131653070961,
+    "agegroup": "pediatric",
+    "age": 0,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5358248057760391915,
+    "agegroup": "pediatric",
+    "age": 4,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 2910792415416241232,
+    "agegroup": "middle age",
+    "age": 60,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3236889688608933201,
+    "agegroup": "pediatric",
+    "age": 7,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 873841941134756653,
+    "agegroup": "pediatric",
+    "age": 0,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 4914958673852708001,
+    "agegroup": "pediatric",
+    "age": 0,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7940873056673161614,
+    "agegroup": "middle age",
+    "age": 54,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5790082681823887195,
+    "agegroup": "elderly",
+    "age": 75,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8784992881134320623,
+    "agegroup": "young",
+    "age": 21,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "Hispanic or Latino",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 585602210582743583,
+    "agegroup": "middle age",
+    "age": 63,
+    "gender": "male",
+    "severity": "severe",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8495867852531354766,
+    "agegroup": "young",
+    "age": 21,
+    "gender": "female",
+    "severity": "moderate",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 5949256390667919732,
+    "agegroup": "young",
+    "age": 31,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 8034843055276431066,
+    "agegroup": "young",
+    "age": 31,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3756185925576911192,
+    "agegroup": "pediatric",
+    "age": 6,
+    "gender": "female",
+    "severity": "severe",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 6314847684444337705,
+    "agegroup": "young",
+    "age": 41,
+    "gender": "male",
+    "severity": "mild",
+    "ethnicity": "Asian",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3863192595670439556,
+    "agegroup": "elderly",
+    "age": 77,
+    "gender": "female",
+    "severity": "mild",
+    "ethnicity": "White",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 7848017270529219177,
+    "agegroup": "young",
+    "age": 41,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  },
+  {
+    "name": 3300978542346459943,
+    "agegroup": "elderly",
+    "age": 74,
+    "gender": "male",
+    "severity": "moderate",
+    "ethnicity": "Black or African American",
+    "medication": "doxycycline"
+  }
+]

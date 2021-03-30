@@ -101,6 +101,70 @@ Files.forEach(function(datafile, index) {
             if (trialData[item].medication == 'ipilimumab') {
                 if (eventProbabilityImmuno[eventSimulator(eventProbabilityValuesImmuno)] == 'adverse') {
                     experienceAdverseEvents = true
+                    // Since age is the greatest determining factor, we define it to have
+                    // the greatest impact on the probability of adverse events and
+                    // effectiveness
+                    if (trialData[item].agegroup == 'pediatric') {
+                        // We take into account the ethnicity variation in previous clinical trials
+                        if (trialData[item].gender == 'male') {
+                            
+                            if (trialData[item].ethnicity == 'Asian') {
+
+                            } else if (trialData[item].ethnicity == 'Black or African American') {
+
+                            } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
+
+                            } else if (trialData[item].ethnicity == 'White') {
+
+                            }
+                        } else if (trialData[item].gender == 'female') {
+
+                            if (trialData[item].ethnicity == 'Asian') {
+
+                            } else if (trialData[item].ethnicity == 'Black or African American') {
+
+                            } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
+
+                            } else if (trialData[item].ethnicity == 'White') {
+
+                            }
+                        }
+
+                    } else if (trialData[item].agegroup == 'young') {
+                        // We take into account the ethnicity variation in previous clinical trials
+                        if (trialData[item].ethnicity == 'Asian') {
+
+                        } else if (trialData[item].ethnicity == 'Black or African American') {
+
+                        } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
+
+                        } else if (trialData[item].ethnicity == 'White') {
+                            
+                        }
+
+                    } else if (trialData[item].agegroup == 'middle age') {
+                        // We take into account the ethnicity variation in previous clinical trials
+                        if (trialData[item].ethnicity == 'Asian') {
+
+                        } else if (trialData[item].ethnicity == 'Black or African American') {
+
+                        } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
+
+                        } else if (trialData[item].ethnicity == 'White') {
+                            
+                        }
+                    } else if (trialData[item].agegroup == 'elderly') {
+                        // We take into account the ethnicity variation in previous clinical trials
+                        if (trialData[item].ethnicity == 'Asian') {
+
+                        } else if (trialData[item].ethnicity == 'Black or African American') {
+
+                        } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
+
+                        } else if (trialData[item].ethnicity == 'White') {
+                            
+                        }
+                    }
                     // This is the logic that occurs 
                 } else { // If there is no adverse effect report none
                 }

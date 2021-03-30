@@ -53,12 +53,11 @@ func GeneratePatientInfo(medication string) *Patient {
 	// TODO Decrease chance of certain ethnicities to appear in
 	// clinical study to represent real world situations
 	var severities [3]string
-	var ethnicities [6]string
+	var ethnicities [4]string
 	var genders [2]string
 
 	severities[0], severities[1], severities[2] = "mild", "moderate", "severe"
-	ethnicities[0], ethnicities[1], ethnicities[2] = "American Indian or Alaska Native", "Asian", "Black or African American"
-	ethnicities[3], ethnicities[4], ethnicities[5] = "Hispanic or Latino", "Native Hawaiian or Other Pacific Islander", "White"
+	ethnicities[0], ethnicities[1], ethnicities[2], ethnicities[3] = "Asian", "Black or African American", "Hispanic or Latino", "White"
 	genders[0], genders[1] = "male", "female"
 
 	// We proceed with the logic for choosing traits and then
