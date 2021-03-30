@@ -79,6 +79,9 @@ var fataleventProbabilityValuesChemo = [87, 9913];
 var fatalProbabilityImmuno = ["fatality", "none"];
 var fataleventProbabilityValuesImmuno = [128, 9872];
 
+var fatalProbabilityImmuno = ["fatality", "none"];
+var fataleventProbabilityValuesImmuno = [128, 9872];
+
 // We create an array container to store the future concluding information
 let patientTrialOutcome = {}
 
@@ -87,7 +90,6 @@ Files.forEach(function(datafile, index) {
     console.log(`Running the analysis for trial data: ` + (index + 1))
     trialData = JSON.parse(fs.readFileSync(Files[index], "utf8"));
     // Create a container to store the information for the simulation
-    trialSimulationResults = []
     // First create the file for this trial
 
     for (item in trialData) {
@@ -107,63 +109,90 @@ Files.forEach(function(datafile, index) {
                     if (trialData[item].agegroup == 'pediatric') {
                         // We take into account the ethnicity variation in previous clinical trials
                         if (trialData[item].gender == 'male') {
-                            
                             if (trialData[item].ethnicity == 'Asian') {
-
+                                // ipma stands for Ipilimumab, Pediatric, Male, Asian
+                                // This is the pattern we use to define variability specific variables.
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
                             } else if (trialData[item].ethnicity == 'Black or African American') {
-
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
                             } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
-
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
                             } else if (trialData[item].ethnicity == 'White') {
-
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
                             }
                         } else if (trialData[item].gender == 'female') {
 
                             if (trialData[item].ethnicity == 'Asian') {
-
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
                             } else if (trialData[item].ethnicity == 'Black or African American') {
-
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
                             } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
-
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
                             } else if (trialData[item].ethnicity == 'White') {
-
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
                             }
                         }
 
                     } else if (trialData[item].agegroup == 'young') {
                         // We take into account the ethnicity variation in previous clinical trials
-                        if (trialData[item].ethnicity == 'Asian') {
-
-                        } else if (trialData[item].ethnicity == 'Black or African American') {
-
-                        } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
-
-                        } else if (trialData[item].ethnicity == 'White') {
-                            
-                        }
+                            if (trialData[item].ethnicity == 'Asian') {
+                                // ipma stands for Ipilimumab, Pediatric, Male, Asian
+                                // This is the pattern we use to define variability specific variables.
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                            } else if (trialData[item].ethnicity == 'Black or African American') {
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                            } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                            } else if (trialData[item].ethnicity == 'White') {
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                            }
 
                     } else if (trialData[item].agegroup == 'middle age') {
                         // We take into account the ethnicity variation in previous clinical trials
-                        if (trialData[item].ethnicity == 'Asian') {
-
-                        } else if (trialData[item].ethnicity == 'Black or African American') {
-
-                        } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
-
-                        } else if (trialData[item].ethnicity == 'White') {
-                            
-                        }
+                            if (trialData[item].ethnicity == 'Asian') {
+                                // ipma stands for Ipilimumab, Pediatric, Male, Asian
+                                // This is the pattern we use to define variability specific variables.
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                            } else if (trialData[item].ethnicity == 'Black or African American') {
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                            } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                            } else if (trialData[item].ethnicity == 'White') {
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                            }
                     } else if (trialData[item].agegroup == 'elderly') {
                         // We take into account the ethnicity variation in previous clinical trials
-                        if (trialData[item].ethnicity == 'Asian') {
-
-                        } else if (trialData[item].ethnicity == 'Black or African American') {
-
-                        } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
-
-                        } else if (trialData[item].ethnicity == 'White') {
-                            
-                        }
+                            if (trialData[item].ethnicity == 'Asian') {
+                                // ipma stands for Ipilimumab, Pediatric, Male, Asian
+                                // This is the pattern we use to define variability specific variables.
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                            } else if (trialData[item].ethnicity == 'Black or African American') {
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                            } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                            } else if (trialData[item].ethnicity == 'White') {
+                                var ipma = ["more common", "less common", "rare"];
+                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                            }
                     }
                     // This is the logic that occurs 
                 } else { // If there is no adverse effect report none
