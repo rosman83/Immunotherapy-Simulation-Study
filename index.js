@@ -119,7 +119,6 @@ Files.forEach(function(datafile, index) {
            // to be 0.87%, as compared with that of chemotherapy, 1.28% [Source 21]
             if (trialData[item].medication == 'ipilimumab' || 'nivolumab' ) {
                 if (fatalProbabilityImmuno[eventSimulator(fataleventProbabilityValuesImmuno)] == 'fatality') {
-                    console.log("Detected fatality")
                     return true
                 } else {
                     return false
@@ -135,7 +134,8 @@ Files.forEach(function(datafile, index) {
             }
        }
 
-
+       // Here we store the results of any adverse events for the stages to later document.
+       stageResults = []
        for (i = 0; i < 4; i++) {
         stageSimulation()
        }
