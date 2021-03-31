@@ -59,7 +59,10 @@ function eventSimulator(proabability) {
     }
 }
 
-// First we create the probability options model for the severity of the adverse effect based on cited statistics
+// We load the adversity event statistic table into memory for later use 
+let adversityStatistics = fs.readFileSync('./data/supplementary/adverse.json');
+let adversityParsed = JSON.parse(adversityStatistics);
+console.log('Adversity Statistics found at the following file path: ./data/supplementary/adverse.json')
 
 // We use Binomial Probability to consider the amount of event opportunities may happen. Since the 24 month period
 // is being divided into six stages of four months each, there are six opportunities to encounter adverse effects
@@ -106,96 +109,81 @@ Files.forEach(function(datafile, index) {
                     // Since age is the greatest determining factor, we define it to have
                     // the greatest impact on the probability of adverse events and
                     // effectiveness
-                    if (trialData[item].agegroup == 'pediatric') {
+                    if (trialData[item].agegroup == 'pediatric' || 'elderly') {
                         // We take into account the ethnicity variation in previous clinical trials
                         if (trialData[item].gender == 'male') {
                             if (trialData[item].ethnicity == 'Asian') {
-                                // ipma stands for Ipilimumab, Pediatric, Male, Asian
-                                // This is the pattern we use to define variability specific variables.
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
-                            } else if (trialData[item].ethnicity == 'Black or African American') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
-                            } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                                var rarities = ["more common", "less common", "rare"];
+                                var rarityvalues = [51,43,6];
+                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                    // adversityParsed
+                                    function pickRandomAdversity(){
+                                        var obj_keys = Object.entries(adversityParsed.morecommon);
+                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                        selectedquestion = obj_keys[ran_key];
+                                        console.log(ran_key[0]) 
+                                    }
+
+                                    pickRandomAdversity()
+                                } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
+
+                                } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
+
+                                }
+                            } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
+                                var rarities = ["more common", "less common", "rare"];
+                                var rarityvalues = [51,44,5];
                             } else if (trialData[item].ethnicity == 'White') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                                var rarities = ["more common", "less common", "rare"];
+                                var rarityvalues = [51,45,4];
                             }
                         } else if (trialData[item].gender == 'female') {
 
                             if (trialData[item].ethnicity == 'Asian') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
-                            } else if (trialData[item].ethnicity == 'Black or African American') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
-                            } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                                var rarities = ["more common", "less common", "rare"];
+                                var rarityvalues = [50,43,7];
+                            } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
+                                var rarities = ["more common", "less common", "rare"];
+                                var rarityvalues = [50,44,6];
                             } else if (trialData[item].ethnicity == 'White') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                                var rarities = ["more common", "less common", "rare"];
+                                var rarityvalues = [50,45,5];
                             }
                         }
 
-                    } else if (trialData[item].agegroup == 'young') {
+                    } else if (trialData[item].agegroup == 'young' || 'middle') {
                         // We take into account the ethnicity variation in previous clinical trials
+                        if (trialData[item].gender == 'male') {
                             if (trialData[item].ethnicity == 'Asian') {
-                                // ipma stands for Ipilimumab, Pediatric, Male, Asian
+                                // rarities stands for Ipilimumab, Pediatric, Male, Asian
                                 // This is the pattern we use to define variability specific variables.
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
-                            } else if (trialData[item].ethnicity == 'Black or African American') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
-                            } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                                var rarities = ["more common", "less common", "rare"];
+                                var rarityvalues = [47,26,17];
+                            } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
+                                var rarities = ["more common", "less common", "rare"];
+                                var rarityvalues = [47,27,16];
                             } else if (trialData[item].ethnicity == 'White') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                                var rarities = ["more common", "less common", "rare"];
+                                var rarityvalues = [47,28,15];
                             }
+                        } else if (trialData[item].gender == 'female') {
 
-                    } else if (trialData[item].agegroup == 'middle age') {
-                        // We take into account the ethnicity variation in previous clinical trials
                             if (trialData[item].ethnicity == 'Asian') {
-                                // ipma stands for Ipilimumab, Pediatric, Male, Asian
-                                // This is the pattern we use to define variability specific variables.
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
-                            } else if (trialData[item].ethnicity == 'Black or African American') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
-                            } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                                var rarities = ["more common", "less common", "rare"];
+                                var rarityvalues = [46,26,18];
+                            } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
+                                var rarities = ["more common", "less common", "rare"];
+                                var rarityvalues = [46,27,17];
                             } else if (trialData[item].ethnicity == 'White') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
+                                var rarities = ["more common", "less common", "rare"];
+                                var rarityvalues = [46,28,16];
                             }
-                    } else if (trialData[item].agegroup == 'elderly') {
-                        // We take into account the ethnicity variation in previous clinical trials
-                            if (trialData[item].ethnicity == 'Asian') {
-                                // ipma stands for Ipilimumab, Pediatric, Male, Asian
-                                // This is the pattern we use to define variability specific variables.
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
-                            } else if (trialData[item].ethnicity == 'Black or African American') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
-                            } else if (trialData[item].ethnicity == 'Hispanic or Latino') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
-                            } else if (trialData[item].ethnicity == 'White') {
-                                var ipma = ["more common", "less common", "rare"];
-                                var fataleventProbabilityValuesImmuno = [45, 35, 20];
-                            }
+                        }
+
                     }
                     // This is the logic that occurs 
-                } else { // If there is no adverse effect report none
+                } else { 
+                    // The patient does not experience an adverse effect
                 }
             } else if (trialData[item].medication == 'nivolumab') {
                 if (eventProbabilityImmuno[eventSimulator(eventProbabilityValuesImmuno)] == 'adverse') {
@@ -208,6 +196,8 @@ Files.forEach(function(datafile, index) {
                 } else { // If there is no adverse effect do nothing
                 }
             }
+            // Here we commence possible health improvements depending on 
+            // statistical probability.
        }
 
        function fatalitySimulation() {
