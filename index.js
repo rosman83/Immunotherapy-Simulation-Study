@@ -1,8 +1,10 @@
 
+
 // Here we define dependencies we need for the program
 var fs = require('fs'); // fs stands for the File System of the machine 
 const Path = require("path"); // Allows natively formatting file paths
-
+const axios = require("axios");
+(async () => {
 // This file defines the logic and 
 // utilization of the previously
 // generated population storage files.
@@ -42,21 +44,20 @@ ThroughDirectory("./data/initial/");
 // We briefly report that we successfully disovered the population data files.
 console.log(`\nThe simulation has now been launched with the following discovered data files:\n\n- ${Files[0]}\n- ${Files[1]}\n- ${Files[2]}\n`)
 
-// This is the base function that will choose events based on probability
-function eventSimulator(proabability) {
-    var randomchance = Math.random();
-    var sum = 0;
-    proabability.forEach(function(chance) {
-        sum+=chance;
-    });
-    var chance = 0;
-    for(var i=0; i<proabability.length; i++) {
-        chance+=proabability[i]/sum;
-        if(randomchance<chance) {
-            return i;
-        }
-    }
+async function makeGetRequest(themethod) {
+    console.log("Making a request")
+    await axios.post('http://192.168.1.254:3000/probability', {
+        method: String(themethod),
+      })
+    let data = await res.data
+    console.log(String(data));
+    return data
 }
+
+makeGetRequest('ip')
+
+
+// This is the base function that will choose events based on probability
 
 // We load the adversity event statistic table into memory for later use 
 let adversityStatistics = fs.readFileSync('./supplementary/adverse.json');
@@ -66,30 +67,11 @@ console.log('Adversity Statistics found at the following file path: ./supplement
 // We use Binomial Probability to consider the amount of event opportunities may happen. Since the 24 month period
 // is being divided into six stages of four months each, there are six opportunities to encounter adverse effects
 
-/* // 65.82% of immunotherapy patients developed any adverse effects.
-const eventProbabilityImmuno = ["adverse", "none"];
-const eventProbabilityValuesImmuno = [28, 72]; */
-
-// We use a different function style for chemotherapy to not use existing context
-
-function probability(n) {
-    return Math.random() < n;
-}
-
-// Fatality probabilities for Immunotherapy and Chemotherapy 
-/* const fatalProbabilityChemo = ["fatality", "none"];
-const fataleventProbabilityValuesChemo = [87, 9913];
-
-const fatalProbabilityImmuno = ["fatality", "none"];
-const fataleventProbabilityValuesImmuno = [128, 9872]; */
-
-
 // We define this to run for each of the three trial data files
 Files.forEach(function(datafile, index) {
     let healthyCounter = []
     let nonhealthyCounter = []
 
-    console.log(`Running the analysis for trial data: ` + (index + 1))
     trialData = JSON.parse(fs.readFileSync(Files[index], "utf8"));
     // Create a container to store the information for the simulation
     // First create the file for this trial
@@ -103,12 +85,460 @@ Files.forEach(function(datafile, index) {
        stageResults = []
        healthStageResults = []
 
-       function stageSimulation() {
+       
+            // Here we commence possible health improvements depending on 
+            // statistical probability.
+       
+
+       function fatalitySimulation() {
+           // The rate of fatality for a patient undergoing immunotherapy is approximated 
+           // to be 0.87%, as compared with that of chemotherapy, 1.28% [Source 21]
+            if (trialData[item].medication == 'ipilimumab' || 'nivolumab' ) {
+                let weightedoption3 = makeGetRequest('fip')
+                if (weightedoption3 == 'fatality') {
+                    return true
+                } else {
+                    return false
+                }
+            } else if (trialData[item].medication == 'doxycycline') {
+                let weightedoption3 = makeGetRequest('fcp')
+                if (weightedoption3 == 'fatality') {
+                    return true
+                } else {
+                    return false
+                }
+            } else {
+                let err = 'We could not detect the medication for the following patient: \n' + item
+            }
+       }
+       
+
+
+
+       // Create a function to handle any undefined values
+        while (stageResults.length < 4) {
            // The simulation functions with different statistical probabilities
            // depending on the medication each patient takes.
-           console.log("Running simulation for: " + trialData[item].medication)
-            if (trialData[item].medication == 'ipilimumab' || 'nivolumab') {
-                if (eventProbabilityImmuno[eventSimulator(eventProbabilityValuesImmuno)] == 'adverse') {
+           if (trialData[item].medication === 'doxycycline') {
+            let weightedoption2 = makeGetRequest('cp')
+            if (chemooptions[weightedoption2] == 'adverses') {
+                experienceAdverseEvents = true
+                // Since age is the greatest determining factor, we define it to have
+                // the greatest impact on the probability of adverse events and
+                // effectiveness
+                if (trialData[item].agegroup == 'pediatric' || 'elderly') {
+                    // We take into account the ethnicity variation in previous clinical trials
+                    if (trialData[item].gender == 'male') {
+                        if (trialData[item].ethnicity == 'Asian') {
+                            var rarities = ["more common", "less common", "rare"];
+                            var rarityvalues = [47,23,20];
+                            if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                // adversityParsed
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.lesscommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.lesscommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.rare);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            }
+                        } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
+                            var rarities = ["more common", "less common", "rare"];
+                            var rarityvalues = [47,24,19];
+                            if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                // adversityParsed
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.morecommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.lesscommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.rare);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            }
+                        } else if (trialData[item].ethnicity == 'White') {
+                            var rarities = ["more common", "less common", "rare"];
+                            var rarityvalues = [47,25,18];
+                            if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                // adversityParsed
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.morecommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.lesscommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.rare);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            }
+                        }
+                    } else if (trialData[item].gender == 'female') {
+
+                        if (trialData[item].ethnicity == 'Asian') {
+                            var rarities = ["more common", "less common", "rare"];
+                            var rarityvalues = [47,22,21];
+                            if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                // adversityParsed
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.morecommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.lesscommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.rare);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            }
+                        } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
+                            var rarities = ["more common", "less common", "rare"];
+                            var rarityvalues = [47,23,20];
+                            if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                // adversityParsed
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.morecommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.lesscommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.rare);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            }
+                        } else if (trialData[item].ethnicity == 'White') {
+                            var rarities = ["more common", "less common", "rare"];
+                            var rarityvalues = [47,24,19];
+                            if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                // adversityParsed
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.morecommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.lesscommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.rare);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            }
+                        }
+                    }
+
+                } else if (trialData[item].agegroup == 'young' || 'middle') {
+                    // We take into account the ethnicity variation in previous clinical trials
+                    if (trialData[item].gender == 'male') {
+                        if (trialData[item].ethnicity == 'Asian') {
+                            // rarities stands for Ipilimumab, Pediatric, Male, Asian
+                            // This is the pattern we use to define variability specific variables.
+                            var rarities = ["more common", "less common", "rare"];
+                            var rarityvalues = [47,26,17];
+                            if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                // adversityParsed
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.morecommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.lesscommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.rare);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            }
+                        } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
+                            var rarities = ["more common", "less common", "rare"];
+                            var rarityvalues = [47,27,16];
+                            if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                // adversityParsed
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.morecommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.lesscommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.rare);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            }
+                        } else if (trialData[item].ethnicity == 'White') {
+                            var rarities = ["more common", "less common", "rare"];
+                            var rarityvalues = [47,28,15];
+                            if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                // adversityParsed
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.morecommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.lesscommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.rare);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            }
+                        }
+                    } else if (trialData[item].gender == 'female') {
+
+                        if (trialData[item].ethnicity == 'Asian') {
+                            var rarities = ["more common", "less common", "rare"];
+                            var rarityvalues = [46,26,18];
+                            if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                // adversityParsed
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.morecommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.lesscommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.rare);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            }
+                        } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
+                            var rarities = ["more common", "less common", "rare"];
+                            var rarityvalues = [46,27,17];
+                            if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                // adversityParsed
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.morecommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.lesscommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.rare);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            }
+                        } else if (trialData[item].ethnicity == 'White') {
+                            var rarities = ["more common", "less common", "rare"];
+                            var rarityvalues = [46,28,16];
+                            if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                // adversityParsed
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.morecommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.lesscommon);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
+                                function pickRandomAdversity(){
+                                    var obj_keys = Object.entries(adversityParsed.rare);
+                                    var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
+                                    stageResults.push(String(ran_key[0]))
+                                    healthStageResults.push(String(ran_key[1]))
+                                }
+
+                                pickRandomAdversity()
+                            }
+                        }
+                    }
+
+                }
+            } else if (chemooptions[weightedoption2] == 'nones') { 
+                stageResults.push('Healthy')
+                healthStageResults.push(0)
+            }
+            } 
+            if (trialData[item].medication === 'ipilimumab' || 'nivolumab') {
+                let weightedoption1 = makeGetRequest('ip')
+
+                if (weightedoption1 === 'adverse') {
                     experienceAdverseEvents = true
                     // Since age is the greatest determining factor, we define it to have
                     // the greatest impact on the probability of adverse events and
@@ -151,7 +581,7 @@ Files.forEach(function(datafile, index) {
                             } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
                                 var rarities = ["more common", "less common", "rare"];
                                 var rarityvalues = [51,44,5];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
                                     // adversityParsed
                                     function pickRandomAdversity(){
                                         var obj_keys = Object.entries(adversityParsed.morecommon);
@@ -183,7 +613,7 @@ Files.forEach(function(datafile, index) {
                             } else if (trialData[item].ethnicity == 'White') {
                                 var rarities = ["more common", "less common", "rare"];
                                 var rarityvalues = [51,45,4];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
                                     // adversityParsed
                                     function pickRandomAdversity(){
                                         var obj_keys = Object.entries(adversityParsed.morecommon);
@@ -218,7 +648,7 @@ Files.forEach(function(datafile, index) {
                             if (trialData[item].ethnicity == 'Asian') {
                                 var rarities = ["more common", "less common", "rare"];
                                 var rarityvalues = [50,43,7];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
                                     // adversityParsed
                                     function pickRandomAdversity(){
                                         var obj_keys = Object.entries(adversityParsed.morecommon);
@@ -250,7 +680,7 @@ Files.forEach(function(datafile, index) {
                             } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
                                 var rarities = ["more common", "less common", "rare"];
                                 var rarityvalues = [50,44,6];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
                                     // adversityParsed
                                     function pickRandomAdversity(){
                                         var obj_keys = Object.entries(adversityParsed.morecommon);
@@ -282,7 +712,7 @@ Files.forEach(function(datafile, index) {
                             } else if (trialData[item].ethnicity == 'White') {
                                 var rarities = ["more common", "less common", "rare"];
                                 var rarityvalues = [50,45,5];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
                                     // adversityParsed
                                     function pickRandomAdversity(){
                                         var obj_keys = Object.entries(adversityParsed.morecommon);
@@ -322,7 +752,7 @@ Files.forEach(function(datafile, index) {
                                 // This is the pattern we use to define variability specific variables.
                                 var rarities = ["more common", "less common", "rare"];
                                 var rarityvalues = [47,26,17];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
                                     // adversityParsed
                                     function pickRandomAdversity(){
                                         var obj_keys = Object.entries(adversityParsed.morecommon);
@@ -354,7 +784,7 @@ Files.forEach(function(datafile, index) {
                             } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
                                 var rarities = ["more common", "less common", "rare"];
                                 var rarityvalues = [47,27,16];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
                                     // adversityParsed
                                     function pickRandomAdversity(){
                                         var obj_keys = Object.entries(adversityParsed.morecommon);
@@ -386,7 +816,7 @@ Files.forEach(function(datafile, index) {
                             } else if (trialData[item].ethnicity == 'White') {
                                 var rarities = ["more common", "less common", "rare"];
                                 var rarityvalues = [47,28,15];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
                                     // adversityParsed
                                     function pickRandomAdversity(){
                                         var obj_keys = Object.entries(adversityParsed.morecommon);
@@ -421,7 +851,7 @@ Files.forEach(function(datafile, index) {
                             if (trialData[item].ethnicity == 'Asian') {
                                 var rarities = ["more common", "less common", "rare"];
                                 var rarityvalues = [46,26,18];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
                                     // adversityParsed
                                     function pickRandomAdversity(){
                                         var obj_keys = Object.entries(adversityParsed.morecommon);
@@ -453,7 +883,7 @@ Files.forEach(function(datafile, index) {
                             } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
                                 var rarities = ["more common", "less common", "rare"];
                                 var rarityvalues = [46,27,17];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
+                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
                                     // adversityParsed
                                     function pickRandomAdversity(){
                                         var obj_keys = Object.entries(adversityParsed.morecommon);
@@ -519,459 +949,11 @@ Files.forEach(function(datafile, index) {
 
                     }
                     // This is the logic that occurs 
-                } else { 
+                } else if (weightedoption1 === 'none'){ 
                     stageResults.push('Healthy')
                     healthStageResults.push(0)
                 }
-            } else if (trialData[item].medication == 'doxycycline') {
-                if (probability(1)) {
-                    console.log('Pushing non healthy')
-                    experienceAdverseEvents = true
-                     // Since age is the greatest determining factor, we define it to have
-                    // the greatest impact on the probability of adverse events and
-                    // effectiveness
-                    if (trialData[item].agegroup == 'pediatric' || 'elderly') {
-                        // We take into account the ethnicity variation in previous clinical trials
-                        if (trialData[item].gender == 'male') {
-                            if (trialData[item].ethnicity == 'Asian') {
-                                var rarities = ["more common", "less common", "rare"];
-                                var rarityvalues = [47,23,20];
-                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
-                                    // adversityParsed
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.lesscommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.lesscommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.rare);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                }
-                            } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
-                                var rarities = ["more common", "less common", "rare"];
-                                var rarityvalues = [47,24,19];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
-                                    // adversityParsed
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.morecommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.lesscommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.rare);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                }
-                            } else if (trialData[item].ethnicity == 'White') {
-                                var rarities = ["more common", "less common", "rare"];
-                                var rarityvalues = [47,25,18];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
-                                    // adversityParsed
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.morecommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.lesscommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.rare);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                }
-                            }
-                        } else if (trialData[item].gender == 'female') {
-
-                            if (trialData[item].ethnicity == 'Asian') {
-                                var rarities = ["more common", "less common", "rare"];
-                                var rarityvalues = [47,22,21];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
-                                    // adversityParsed
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.morecommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.lesscommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.rare);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                }
-                            } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
-                                var rarities = ["more common", "less common", "rare"];
-                                var rarityvalues = [47,23,20];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
-                                    // adversityParsed
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.morecommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.lesscommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.rare);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                }
-                            } else if (trialData[item].ethnicity == 'White') {
-                                var rarities = ["more common", "less common", "rare"];
-                                var rarityvalues = [47,24,19];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
-                                    // adversityParsed
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.morecommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.lesscommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.rare);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                }
-                            }
-                        }
-
-                    } else if (trialData[item].agegroup == 'young' || 'middle') {
-                        // We take into account the ethnicity variation in previous clinical trials
-                        if (trialData[item].gender == 'male') {
-                            if (trialData[item].ethnicity == 'Asian') {
-                                // rarities stands for Ipilimumab, Pediatric, Male, Asian
-                                // This is the pattern we use to define variability specific variables.
-                                var rarities = ["more common", "less common", "rare"];
-                                var rarityvalues = [47,26,17];
-                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
-                                    // adversityParsed
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.morecommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.lesscommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.rare);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                }
-                            } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
-                                var rarities = ["more common", "less common", "rare"];
-                                var rarityvalues = [47,27,16];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
-                                    // adversityParsed
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.morecommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.lesscommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.rare);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                }
-                            } else if (trialData[item].ethnicity == 'White') {
-                                var rarities = ["more common", "less common", "rare"];
-                                var rarityvalues = [47,28,15];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
-                                    // adversityParsed
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.morecommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.lesscommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.rare);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                }
-                            }
-                        } else if (trialData[item].gender == 'female') {
-
-                            if (trialData[item].ethnicity == 'Asian') {
-                                var rarities = ["more common", "less common", "rare"];
-                                var rarityvalues = [46,26,18];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
-                                    // adversityParsed
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.morecommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.lesscommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.rare);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                }
-                            } else if (trialData[item].ethnicity == 'Black or African American' || 'Hispanic or Latino') {
-                                var rarities = ["more common", "less common", "rare"];
-                                var rarityvalues = [46,27,17];
-                                 if (rarities[eventSimulator(rarityvalues)] == 'more common') {
-                                    // adversityParsed
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.morecommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.lesscommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.rare);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                }
-                            } else if (trialData[item].ethnicity == 'White') {
-                                var rarities = ["more common", "less common", "rare"];
-                                var rarityvalues = [46,28,16];
-                                if (rarities[eventSimulator(rarityvalues)] == 'more common') {
-                                    // adversityParsed
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.morecommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'less common') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.lesscommon);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                } else if (rarities[eventSimulator(rarityvalues)] == 'rare') {
-                                    function pickRandomAdversity(){
-                                        var obj_keys = Object.entries(adversityParsed.rare);
-                                        var ran_key = obj_keys[Math.floor(Math.random() *obj_keys.length)];
-                                        stageResults.push(String(ran_key[0]))
-                                        healthStageResults.push(String(ran_key[1]))
-                                    }
-
-                                    pickRandomAdversity()
-                                }
-                            }
-                        }
-
-                    }
-                } else { 
-                    console.log('Pushing healthy')
-                    stageResults.push('Healthy')
-                    healthStageResults.push(0)
-                }
-            } else {
-                console.log("Detected an unparsed patient with no medication")
-                console.log(trialData[item])
             }
-            // Here we commence possible health improvements depending on 
-            // statistical probability.
-       }
-
-       function fatalitySimulation() {
-           // The rate of fatality for a patient undergoing immunotherapy is approximated 
-           // to be 0.87%, as compared with that of chemotherapy, 1.28% [Source 21]
-            if (trialData[item].medication == 'ipilimumab' || 'nivolumab' ) {
-                if (fatalProbabilityImmuno[eventSimulator(fataleventProbabilityValuesImmuno)] == 'fatality') {
-                    return true
-                } else {
-                    return false
-                }
-            } else if (trialData[item].medication == 'doxycycline') {
-                if (fatalProbabilityChemo[eventSimulator(fataleventProbabilityValuesChemo)] == 'fatality') {
-                    return true
-                } else {
-                    return false
-                }
-            } else {
-                let err = 'We could not detect the medication for the following patient: \n' + item
-            }
-       }
-
-
-
-       // Create a function to handle any undefined values
-       while (stageResults.length < 4) {
-           stageSimulation()
        } 
 
        // Store this information in the final container that we prepare documentation
@@ -988,16 +970,16 @@ Files.forEach(function(datafile, index) {
         "medication": trialData[item].medication,
         // Now we define the new results in additional properties
         // for later analysis
-        "health": Number(((((100 - healthStageResults[0]) - healthStageResults[1]) - healthStageResults[2]) - healthStageResults[3])),
         "adverseevents": experienceAdverseEvents,
         "fatality": fatalitySimulation(),
+        "health": Number(((((100 - healthStageResults[0]) - healthStageResults[1]) - healthStageResults[2]) - healthStageResults[3])),
         // Health between stages
         "stage_1_events": stageResults[0],
         "stage_2_events": stageResults[1],
         "stage_3_events": stageResults[2],
         "stage_4_events": stageResults[3]
        }
-        /* if (patientinfo.medication == 'ipilimumab') {
+       /* if (patientinfo.medication == 'ipilimumab') {
             if (patientinfo.stage_1_events == 'Healthy' & patientinfo.stage_2_events == 'Healthy' & patientinfo.stage_3_events == 'Healthy' & patientinfo.stage_4_events == 'Healthy') {
                 healthyCounter.push('Found')
             }
@@ -1006,14 +988,14 @@ Files.forEach(function(datafile, index) {
             }
        }  */
 
-       if (trialData[item].medication == 'doxycycline') {
+        if (trialData[item].medication == 'doxycycline') {
             if (patientinfo.stage_1_events == 'Healthy' & patientinfo.stage_2_events == 'Healthy' & patientinfo.stage_3_events == 'Healthy' & patientinfo.stage_4_events == 'Healthy') {
                 healthyCounter.push('Found')
             }
             if (patientinfo.stage_1_events != 'Healthy' || patientinfo.stage_2_events != 'Healthy' || patientinfo.stage_3_events != 'Healthy' || patientinfo.stage_4_events != 'Healthy') {
                 nonhealthyCounter.push('Found')
             }
-       }
+       }  
 
       
 
@@ -1029,3 +1011,4 @@ Files.forEach(function(datafile, index) {
     console.log(`\nTrial ${index + 1} has completed producing the following final results file: data/final/results_${index + 1}.json`)
 
 });
+})();

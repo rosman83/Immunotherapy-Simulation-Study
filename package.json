@@ -15,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/rashidosman/Immunotherapy-Simulation-Study/issues"
   },
-  "homepage": "https://github.com/rashidosman/Immunotherapy-Simulation-Study#readme"
+  "homepage": "https://github.com/rashidosman/Immunotherapy-Simulation-Study#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "mersenne": "^0.0.4",
+    "weighted": "^0.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
 }
