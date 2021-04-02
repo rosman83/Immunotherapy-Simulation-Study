@@ -45,7 +45,7 @@ func main() {
 		pi.OldDataCleanup("data/initial")
 		pi.CheckFile(filename)
 		time.Sleep(1 * time.Second)
-		fmt.Println("Running this function for ", index)
+		fmt.Println("Running this function for trial: ", index)
 		for i := 0; i < 166; i++ {
 			unparsedPatient := pi.GeneratePatientInfo(medications[0])
 			patientsCollection = append(patientsCollection, unparsedPatient)
@@ -64,6 +64,8 @@ func main() {
 			fmt.Println(err)
 		}
 
+		fmt.Println("\n- Starting next statistic -")
+
 		// Write data of each patient into the JSON data file for the trial
 		time.Sleep(1 * time.Second)
 		err = ioutil.WriteFile(filename, parsedPatient, 0644)
@@ -72,7 +74,7 @@ func main() {
 		}
 
 	}
-	fmt.Println("Finished Stage 1: All data populations have been created for the three trials.")
+	fmt.Println("Finished Simulation.")
 	time.Sleep(1 * time.Second)
 
 	// In the next stage we begin the logic for the actual simulation.
